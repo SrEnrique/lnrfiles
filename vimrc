@@ -40,6 +40,12 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'tpope/vim-rake'
 " Initialize plugin system
+
+
+" Search files  https://github.com/junegunn/fzf.vim
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
@@ -47,7 +53,7 @@ syntax on
 
 
 set background=dark
-set mouse=a
+" set mouse=a
 set number
 
 
@@ -80,3 +86,5 @@ filetype indent on
 " ==== Wrap  ====
 set wrap       		"Don't wrap lines
 set linebreak    	"Wrap lines at convenient points
+
+let g:airline_theme='distinguished'
