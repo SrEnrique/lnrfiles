@@ -48,23 +48,14 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-
 syntax on
-
 
 set background=dark
 " set mouse=a
-set number
-
-
-
 colorscheme gruvbox
-
-
 
 " =========== Indentation ============
 "
-
 set autoindent
 set smartindent
 set smarttab
@@ -72,8 +63,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
-
+set rnu
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>

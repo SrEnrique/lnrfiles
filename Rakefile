@@ -47,6 +47,37 @@ task :update do
   puts 
 end
 
+desc "Install Visual Studio Code snap version"
+task :install_vscode do
+  puts "============================="
+  puts "Install snap vscode"
+  puts "============================="
+
+  run %{sudo snap install code --classic}
+
+end
+
+desc "Install zsh"
+task :install_zsh do
+  puts "============================"
+  puts "Install zsh"
+  puts "============================"
+
+  run %{sudo apt install zsh}
+end
+
+desc "Install Oh-My-ZSH"
+task :install_ohmyzsh do
+  puts "============================"
+  puts "Install oh my zsh"
+  puts "============================"
+
+  run %{wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh}
+  run %{chsh -s `which zsh`}
+  
+ 
+end
+
 desc "upgrade"
 task :upgrade do   
   puts "============================="
@@ -63,6 +94,7 @@ desc "Install"
 task :install do
   Rake::Task["install_dependences"].execute
   Rake::Task["install_vim"].execute
+  Rake::Task["install_vscode"].execute
   
   complete_install_banner
 end
