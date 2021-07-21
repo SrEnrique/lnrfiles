@@ -63,7 +63,7 @@ task :install_zsh do
   puts "Install zsh"
   puts "============================"
 
-  run %{sudo apt install zsh}
+  run %{sudo apt install zsh -y}
 end
 
 desc "Install Oh-My-ZSH"
